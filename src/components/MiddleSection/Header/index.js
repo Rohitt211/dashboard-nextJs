@@ -73,7 +73,7 @@ function MiddleHeader() {
             </div>
           
             <div style={{ display: "flex", alignItems: 'center', }}>
-              <Image src={line2} height={50} width={50} />
+              <Image src={line2} height={50} width={50} alt="image" />
               <Image
                 src={upArrowIcon}
                 height={20}
@@ -98,6 +98,7 @@ function MiddleHeader() {
                 height={15}
                 width={15}
                 className={styles.downImage}
+                alt="image"
               />
             </div>
             <Bar options={options} data={data} width="100px" height="60px" />

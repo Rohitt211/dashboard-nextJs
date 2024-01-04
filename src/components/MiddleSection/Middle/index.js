@@ -14,7 +14,7 @@ function ItemList() {
             <p className={styles.date}>Sat August 12</p>
           </div>
           <div className={styles.arrowImage}>
-            <Image src={rightArrowIcon} width={13} height={13} />
+            <Image src={rightArrowIcon} width={13} height={13} alt="image"/>
           </div>
           <div className={styles.date2}>
             <h4>05:00</h4>
@@ -41,14 +41,14 @@ function ItemList() {
                 <input type="checkbox" />
                 <span className={styles.Item}>Macbook</span>
               </div>
-              <Image src={threeDotsIcon} width={20} height={20} />
+              <Image src={threeDotsIcon} width={20} height={20} alt="image" />
             </div>
             <div className={styles.itembox1}>
               <div className={styles.itemboxcheckbox}>
                 <input type="checkbox" />
                 <span className={styles.Item}>Bicycle</span>
               </div>
-              <Image src={threeDotsIcon} width={20} height={20} />
+              <Image src={threeDotsIcon} width={20} height={20} alt="image" />
             </div>
           </div>
 
@@ -58,14 +58,14 @@ function ItemList() {
                 <input type="checkbox" />
                 <span className={styles.Item}>Motorcycle</span>
               </div>
-              <Image src={threeDotsIcon} width={20} height={20} />
+              <Image src={threeDotsIcon} width={20} height={20} alt="image" />
             </div>
             <div className={styles.itembox1}>
               <div className={styles.itemboxcheckbox}>
                 <input type="checkbox" />
                 <span className={styles.Item}>Iphone 14 pro max</span>
               </div>
-              <Image src={threeDotsIcon} width={20} height={20} />
+              <Image src={threeDotsIcon} width={20} height={20} alt="image" />
             </div>
           </div>
         </div>

@@ -40,17 +40,18 @@ function RightSidebar() {
           src={threeDotsIcon}
           width={25}
           height={25}
+          alt="image"
         />
         <Heading title="Latest Spending" />
-        {spendingItems?.map((item) => {
-          return <SpendingItem {...item} />;
+        {spendingItems?.map((item,index) => {
+          return <SpendingItem key={index} {...item} />;
         })}
         <div className={styles.viewAllButtonBox}>
           <button className={styles.viewAllButton} onClick={()=> {
             console.log("clicked on viewAllButton");
             alert("view all clicked");
           }}>View all</button>
-          <Image src={rightArrow} height={12} width={15} />
+          <Image src={rightArrow} height={12} width={15} alt="image" />
         </div>
       </Box>
 
@@ -59,7 +60,7 @@ function RightSidebar() {
           title="Go to preium"
           style={{ textAlign: "center", fontSize: 16 }}
         />
-        <Image src={kingTajIcon} width={100} height={90} />
+        <Image src={kingTajIcon} width={100} height={90} alt="image"/>
         <Heading title="Need more feature?" style={{ marginBottom: 10 }} />
         <span className={styles.lastSpan}>
           Update your account to premium to get more features.

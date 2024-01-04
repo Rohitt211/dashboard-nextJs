@@ -25,9 +25,9 @@ function Footer() {
       >
         {listItem.map((element, index) =>
           index == 0 ? (
-            <SingleUserHeader handleFilter={handleFilter} />
+            <SingleUserHeader key={index} handleFilter={handleFilter} />
           ) : (
-            <SingleUserItem name={element.name} price={element.price} />
+            <SingleUserItem key={index} name={element.name} price={element.price} />
           )
         )}
       </div>
@@ -35,16 +35,16 @@ function Footer() {
         <div className={Style.item_nine_first}>
           <span>Analytics</span>
           <span>
-            <Image src={threeDotsIcon} width={20} height={20} />
+            <Image src={threeDotsIcon} width={20} height={20} alt="image" />
           </span>
         </div>
         <div className={Style.item_ten_first} style={{ height: "200px" }}>
           <Doughnut data={DOUGHNUT_CHART_DATA.data} />
         </div>
         <div className={Style.item_eleven_first}>
-          {DOUGHNUT_CHART_DATA.status.map((element) => {
+          {DOUGHNUT_CHART_DATA.status.map((element,index) => {
             return (
-              <StatusIndicator name={element.name} color={element.color} />
+              <StatusIndicator key={index} name={element.name} color={element.color} />
             );
           })}
         </div>
@@ -71,13 +71,13 @@ function SingleUserItem({ name, price }) {
   return (
     <div className={Style.item_fourth_first}>
       <div className={Style.item_fifth_first}>
-        <Image src={avatarIcon} className={Style.item_sixth_first} />
+        <Image src={avatarIcon} className={Style.item_sixth_first} alt="image" />
         <span>{name}</span>
       </div>
       <div className={Style.item_seventh_first}>
         <span>{price}</span>
         <span>
-          <Image src={threeDotsIcon} width={20} height={20} />
+          <Image src={threeDotsIcon} width={20} height={20} alt="image" />
         </span>
       </div>
     </div>

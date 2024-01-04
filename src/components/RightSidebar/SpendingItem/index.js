@@ -5,7 +5,7 @@ import Image from "next/image";
 const SpendingItem = ({ image, title, date }) => {
   return (
     <div className={styles.card}>
-      <Image className={styles.image} src={image} width={20} height={20} />
+      <Image className={styles.image} src={image} width={20} height={20} alt="image" />
       <div>
         <h4 className={styles.heading}>{title}</h4>
         <span className={styles.date}>{date}</span>

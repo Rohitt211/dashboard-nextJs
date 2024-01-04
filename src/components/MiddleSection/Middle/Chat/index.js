@@ -1,11 +1,16 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { avatarIcon, clipImage, smileImage } from "@/assets";
 import EmojiPicker from "emoji-picker-react";
 
 function Chat() {
+  const [isEmojiPickerVisible, setEmojiPickerVisible] = useState(false);
+  const handleToggleEmojiPicker = () => {
+    setEmojiPickerVisible(!isEmojiPickerVisible);
+  };
+
   const fileInputRef = useRef(null);
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -17,6 +22,7 @@ function Chat() {
   };
 
   return (
+
     <>
       <div className={styles.container}>
         <div className={styles.container1}>
@@ -33,8 +39,16 @@ function Chat() {
               height={30}
               width={30}
               className={styles.womanImage}
+              alt="image"
             />
-            <div>{/* <EmojiPicker /> */}</div>
+            <div>{isEmojiPickerVisible && (
+        <EmojiPicker
+          onSelect={(emoji) => {
+            console.log(`Selected emoji: ${emoji}`);
+            // Handle the selected emoji as needed
+          }}
+        />
+      )}</div>
             <div className={styles.Chat2}>
               <p style={{ marginTop: "-0.5PX", marginLeft: 10 }}>
                 Are you ready?
@@ -48,7 +62,7 @@ function Chat() {
             <input type="textarea" className={styles.inputbox} />
             <div style={{ display: "flex" }}>
               <div className={styles.smileImage}>
-                <Image src={smileImage} height={20} width={20} />
+                <Image onClick={()=>setEmojiPickerVisible(!isEmojiPickerVisible)} src={smileImage} height={20} width={20} alt="emoji" />
 
                 <Image
                   src={clipImage}
@@ -56,6 +70,7 @@ function Chat() {
                   width={20}
                   className={styles.clipImage}
                   onClick={handleButtonClick}
+                  alt="folder opener"
                 />
 
                 <input

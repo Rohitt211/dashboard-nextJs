@@ -12,10 +12,15 @@ const SidebarIcons = ({ icons, className, handleActiveTab, activeTabName }) => (
           key={icon}
           className={`${styles.iconNotActive} ${
             icon === activeTabName && styles.active
+          } ${
+            icon === "chat" && activeTabName !== "chat" && styles.chatActiveBG
           }`}
           onClick={() => handleActiveTab(icon)}
         >
-          <Icons name={icon} />
+          <Icons
+            className={`${icon === activeTabName && styles.activeImage}`}
+            name={icon}
+          />
         </div>
       );
     })}

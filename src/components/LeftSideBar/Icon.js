@@ -1,7 +1,17 @@
-import React from 'react'
+import React from "react";
 import styles from "./styles.module.css";
-import { avatarIcon, chatIcon, clockIcon, contactIcon, homeIcon, logoutIcon, notificationIcon, profileIcon, settingsIcon, walletIcon } from '@/assets';
-import Image from 'next/image';
+import {
+  avatarIcon,
+  chatIcon,
+  clockIcon,
+  contactIcon,
+  homeIcon,
+  logoutIcon,
+  notificationIcon,
+  settingsIcon,
+  walletIcon,
+} from "@/assets";
+import Image from "next/image";
 
 const icon = {
   chat: chatIcon,
@@ -15,14 +25,14 @@ const icon = {
   logout: logoutIcon,
 };
 
-const Icons = ({name}) => (
+const Icons = ({ name, className }) => (
   <Image
     src={icon[name]}
     width={17}
     height={17}
-    className={styles.navBarIcon}
+    className={`${styles.navBarIcon} ${name !== "profile" && className}`}
     alt={name}
   />
 );
 
-export default Icons
+export default Icons;

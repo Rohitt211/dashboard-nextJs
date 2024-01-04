@@ -133,5 +133,12 @@
 
 .active {
   background-color: #505BEA;
+}
 
+.activeImage {
+  filter: invert(100%);
+}
+
+.chatActiveBG{
+  background-color: #FAE0BF;
 }

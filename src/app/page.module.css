@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #EBE8FC;
+}
+
+.main {
+  display: flex;
+  padding: 15px;
+}
+
+.leftSection {
+  width: 5%;
+}
+
+.middleSection {
+  width: 72%;
+  padding: 20px 10px 10px 20px;
+  margin: 0 20px 0 20px;
+}
+
+.middleHeading {
+  margin-bottom: 20px;
+}
+
+.middleHeadingName {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.middleHeadingPara {
+  font-size: 14px;
+  color: black;
+}
+
+@media (max-width: 1350px) {
+  .leftSection {
+    width: 90px;
+  }
+
+  .middleSection {
+    width: calc(100% - 400px);
+  }
+}

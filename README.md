@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## User Dashboard
 
-## Getting Started
+> `Problem`: Create a Dashboard
+> Create a simple web application from the design provided below as a picture. The idea is to
+> implement the UI elements from the page using Atomic Design Principles.
 
-First, run the development server:
+> `Solution`: Here is a simple web application created in nextJs where it show how to adjust all the things of user [ `like check`, `Balance Statistics `, `List of items to buy`, `Last transaction`, `Expenses and income` and `more...` ] and show into the dashboard using `nextJs` (a react framework).
+
+### Features
+
+- A web application dashboard in nextJs
+- `Overview of the dashboard`: Display of several parts, including settings, profile, logout, contacts, wallet, clock, chat, and notifications.
+- `List of items to buy`: Organize a shopping list by adding, deleting, or editing items.
+  Maybe include links to products so customers can easily buy them online.
+- `History of transactions`:
+  Show a list of recent transactions, maybe with the ability to sort them by newest or oldest filters.
+- `Chat with the customers`: communication or message with contacts in order to engage with them.
+  The prompt "Are you ready?" may point to an interactive component of some kind.
+- `Various analytics information`
+- `Latest Spending`
+- `Preium` To promote premium account features, use a call to action to upgrade for additional features.
+- `left nav bar` : To promote general features, use interactive elements such as buttons (such as “View all”, “Go to premium” or “Send now”) that indicate actions or trigger for specific functions.
+
+## Configure the application
+
+> Clone the repo and install the dependencies.
+
+```bash
+git clone https://github.com/Rohitt211/dashboard-nextJs.git
+```
+
+> go to the directory
+
+```bash
+cd dashboard-nextJs
+```
+
+> install the dependencies
+
+```bash
+npm install
+```
+
+> start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+## Steps for read-only access
+
+To start the express server, run the following
+
+```bash
+
+yarn run dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

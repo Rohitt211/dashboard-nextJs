@@ -1,3 +1,4 @@
+"use client";
 import { rightArrowIcon, threeDotsIcon } from "@/assets";
 import styles from "./style.module.css";
 import Image from "next/image";
@@ -14,7 +15,7 @@ function ItemList() {
             <p className={styles.date}>Sat August 12</p>
           </div>
           <div className={styles.arrowImage}>
-            <Image src={rightArrowIcon} width={13} height={13} alt="image"/>
+            <Image src={rightArrowIcon} width={13} height={13} alt="image" />
           </div>
           <div className={styles.date2}>
             <h4>05:00</h4>

@@ -23,7 +23,6 @@
 
 .date {
     color: grey;
-    /* margin-top: -20px; */
     font-size: 10px;
     margin-right: 10px;
 }
@@ -31,7 +30,6 @@
 .timeBox {
     display: flex;
     align-items: center;
-    /* margin-top: -30px; */
     margin-bottom: 20px;
 }
 
@@ -62,6 +60,8 @@
 
 .addItemtext {
     font-weight: 600;
+    cursor: pointer;
+    user-select: none;
 }
 
 .itembox1 {

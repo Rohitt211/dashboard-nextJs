@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.EmojiPickerReact{
+  position: absolute !important;
+  top: 93%;
+  left: 20px;
+  height: 350px !important;
+}

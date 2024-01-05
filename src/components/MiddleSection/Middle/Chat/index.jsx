@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef,useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { avatarIcon, clipImage, smileImage } from "@/assets";
@@ -7,9 +7,8 @@ import EmojiPicker from "emoji-picker-react";
 
 function Chat() {
   const [isEmojiPickerVisible, setEmojiPickerVisible] = useState(false);
-  const handleToggleEmojiPicker = () => {
-    setEmojiPickerVisible(!isEmojiPickerVisible);
-  };
+  const [inputChat, setInputChat] = useState("");
+  const [selectedEmoji, setSelectedEmoji] = useState(null);
 
   const fileInputRef = useRef(null);
   const handleButtonClick = () => {
@@ -21,8 +20,15 @@ function Chat() {
     console.log("Selected file:", selectedFile);
   };
 
-  return (
+  const handleOnchange = (event) => {
+    setInputChat(event.target.value);
+  };
 
+  const handleEmojiSelect = (event) => {
+    setInputChat((prev) => prev + event?.emoji);
+  };
+
+  return (
     <>
       <div className={styles.container}>
         <div className={styles.container1}>
@@ -41,14 +47,11 @@ function Chat() {
               className={styles.womanImage}
               alt="image"
             />
-            <div>{isEmojiPickerVisible && (
-        <EmojiPicker
-          onSelect={(emoji) => {
-            console.log(`Selected emoji: ${emoji}`);
-            // Handle the selected emoji as needed
-          }}
-        />
-      )}</div>
+            <div>
+              {isEmojiPickerVisible && (
+                <EmojiPicker onEmojiClick={handleEmojiSelect} />
+              )}
+            </div>
             <div className={styles.Chat2}>
               <p style={{ marginTop: "-0.5PX", marginLeft: 10 }}>
                 Are you ready?
@@ -59,10 +62,21 @@ function Chat() {
           </div>
 
           <div className={styles.typeBox}>
-            <input type="textarea" className={styles.inputbox} />
+            <input
+              type="textarea"
+              onChange={handleOnchange}
+              value={inputChat}
+              className={styles.inputbox}
+            />
             <div style={{ display: "flex" }}>
               <div className={styles.smileImage}>
-                <Image onClick={()=>setEmojiPickerVisible(!isEmojiPickerVisible)} src={smileImage} height={20} width={20} alt="emoji" />
+                <Image
+                  onClick={() => setEmojiPickerVisible(!isEmojiPickerVisible)}
+                  src={smileImage}
+                  height={20}
+                  width={20}
+                  alt="emoji"
+                />
 
                 <Image
                   src={clipImage}
@@ -81,7 +95,7 @@ function Chat() {
                 />
               </div>
 
-              <div className={styles.sendBtn}>
+              <div className={styles.sendBtn} onClick={() => {}}>
                 <p>Send now</p>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.module.css";
+import "./styles.scss";
 import {
   avatarIcon,
   chatIcon,
@@ -30,7 +30,7 @@ const Icons = ({ name, className }) => (
     src={icon[name]}
     width={17}
     height={17}
-    className={`${styles.navBarIcon} ${name !== "profile" && className}`}
+    className={`navBarIcon ${name !== "profile" && className}`}
     alt={name}
   />
 );

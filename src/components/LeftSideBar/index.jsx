@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./styles.module.css";
+import "./styles.scss";
 import Icons from "./Icon";
 import { leftSectionIconsName } from "@/constants";
 
@@ -10,15 +10,15 @@ const SidebarIcons = ({ icons, className, handleActiveTab, activeTabName }) => (
       return (
         <div
           key={icon}
-          className={`${styles.iconNotActive} ${
-            icon === activeTabName && styles.active
+          className={`iconNotActive ${
+            icon === activeTabName && "active"
           } ${
-            icon === "chat" && activeTabName !== "chat" && styles.chatActiveBG
+            icon === "chat" && activeTabName !== "chat" && "chatActiveBG"
           }`}
           onClick={() => handleActiveTab(icon)}
         >
           <Icons
-            className={`${icon === activeTabName && styles.activeImage}`}
+            className={`${icon === activeTabName && "activeImage"}`}
             name={icon}
           />
         </div>
@@ -33,9 +33,9 @@ const LeftSideBar = () => {
   const handleActiveTab = (tabName) => setActiveTabName(tabName);
 
   return (
-    <div className={styles.mainContainer}>
-      <h1 className="heading">S.</h1>
-      <div className={styles.iconsBar}>
+    <div className="sideBar">
+      <h1 className="sideBar-heading">S.</h1>
+      <div className="sideBar-iconsBar">
         <SidebarIcons
           activeTabName={activeTabName}
           handleActiveTab={handleActiveTab}
@@ -45,13 +45,13 @@ const LeftSideBar = () => {
           activeTabName={activeTabName}
           handleActiveTab={handleActiveTab}
           icons={leftSectionIconsName.slice(1, 7)}
-          className={styles.middleContainer}
+          className="sideBar-middleContainer"
         />
         <SidebarIcons
           activeTabName={activeTabName}
           handleActiveTab={handleActiveTab}
           icons={leftSectionIconsName.slice(7)}
-          className={styles.lastContainer}
+          className="sideBar-lastContainer"
         />
       </div>
     </div>

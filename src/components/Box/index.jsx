@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./styles.module.css";
+import "./styles.scss";
 
 const Box = ({ children, style }) => {
   return (
-    <div style={style} className={styles.box}>
+    <div style={style} className="box">
       {children}
     </div>
   );

@@ -1,14 +1,14 @@
 import React from "react";
-import styles from "./styles.module.css";
+import "./styles.scss";
 import Image from "next/image";
 
 const SpendingItem = ({ image, title, date }) => {
   return (
-    <div className={styles.card}>
-      <Image className={styles.image} src={image} width={20} height={20} alt="image" />
+    <div className="card">
+      <Image className="card-image" src={image} alt="image" />
       <div>
-        <h4 className={styles.heading}>{title}</h4>
-        <span className={styles.date}>{date}</span>
+        <h4 className="card-heading">{title}</h4>
+        <span className="card-date">{date}</span>
       </div>
     </div>
   );

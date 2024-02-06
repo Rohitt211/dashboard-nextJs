@@ -1,0 +1,92 @@
+$color_1: "grey";
+$background-color_1: white;
+$background-color_2: rgb(238, 233, 233);
+
+.middleheader {
+  flex-grow: 1;
+  display: flex;
+
+  &-middle {
+    background-color: $background-color_1;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 7px 7px 10px grey;
+    flex-grow: 1;
+  }
+
+  &-leftBox {
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  &-textone {
+    font-size: 26px;
+    margin-top: 15px;
+  }
+
+  &-coinbox {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    border-bottom: solid 1px #dbdbdb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  &-coinImage {
+    height: 60px;
+    width: 50px;
+    margin-right: 15px;
+  }
+
+  &-coinText {
+    margin-left: 6px;
+  }
+
+  &-endText {
+    color: $color_1;
+    font-size: 13;
+  }
+
+  &-rightBox {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-chart {
+    flex: 1;
+    height: 30px;
+    width: 70px;
+    background-color: $background-color_2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    float: right;
+  }
+
+  &-filterText {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  &-downImage {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .middleheader {
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &-middle {
+      height: auto;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+$color_1: white;
+$font-family_1: Arial, Helvetica, sans-serif;
+
+.second-header {
+  width: 500px;
+  height: 100%;
+  border-radius: 10px;
+  background-image: url("./../../../assets/card.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color_1;
+  padding: 5px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  &-upperBox {
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  &-VisaText {
+    font-family: $font-family_1;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  &-downBox {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &-headerFlex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &-text {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: "6px";
+  }
+}
+
+@media (max-width: 1350px) {
+  .second-header {
+    width: 100%;
+
+    &-downBox {
+      top: 0px;
+    }
+  }
+}

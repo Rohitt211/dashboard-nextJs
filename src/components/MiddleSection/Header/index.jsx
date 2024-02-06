@@ -1,5 +1,5 @@
 "use client";
-import styles from "./styles.module.css";
+import "./styles.scss";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -60,44 +60,48 @@ const data = {
 function MiddleHeader() {
   return (
     <>
-      <div className={styles.containerFlex}>
-        <div className={styles.container}>
-          <div className={styles.leftBox}>
-            <p className={styles.text}>Balance Statistics</p>
-            <h3 className={styles.textone}>$564</h3>
-            <div className={styles.coinbox}>
-              <Image src={coinImage} className={styles.coinImage} alt="coin" />
+      <div className="middleheader">
+        <div className="middleheader-middle">
+          <div className="middleheader-leftBox">
+            <p>Balance Statistics</p>
+            <h3 className="middleheader-textone">$564</h3>
+            <div className="middleheader-coinbox">
+              <Image
+                src={coinImage}
+                className="middleheader-coinImage"
+                alt="coin"
+              />
               <p style={{ fontSize: 13 }}>
                 Your total <br /> balance
               </p>
             </div>
-          
-            <div style={{ display: "flex", alignItems: 'center', }}>
+
+            <div style={{ display: "flex", alignItems: "center" }}>
               <Image src={line2} height={50} width={50} alt="image" />
               <Image
                 src={upArrowIcon}
                 height={20}
                 width={20}
                 alt="img"
-                className={styles.coinText}
+                className="middleheader-coinText"
               />
               <p style={{ marginLeft: "10px" }}>6%</p>
             </div>
             <p
               style={{ color: "grey", fontSize: 13, marginTop: 15 }}
-              className={styles.endText}
+              className="middleheader-endText"
             >
               Always see your <br /> earning updates
             </p>
           </div>
-          <div className={styles.rightBox}>
-            <div className={styles.chart}>
-              <p className={styles.filterText}>Filter</p>
+          <div className="middleheader-rightBox">
+            <div className="middleheader-chart">
+              <p className="middleheader-filterText">Filter</p>
               <Image
                 src={downIcon}
                 height={15}
                 width={15}
-                className={styles.downImage}
+                className="middleheader-downImage"
                 alt="image"
               />
             </div>

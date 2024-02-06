@@ -1,0 +1,105 @@
+$color_1: #000;
+$color_2: grey;
+$color_3: rgb(134, 134, 134);
+$background-color_1: #fff;
+$background-color_2: #EBE8FC;
+
+.itemList {
+	display: flex;
+	width: 100%;
+	position: relative;
+	gap: 10px;
+
+	&-itemListchild {
+		height: auto;
+		width: 50%;
+		border-radius: 10px;
+		padding: 20px;
+		background-color: $background-color_1;
+		box-shadow: 5px 5px 10px grey;
+		margin: 30px 0;
+
+		&-containerheading {
+			font-size: 20px;
+			color: $color_1;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+
+		&-timeBox {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+
+			&-dateSat {
+				color: $color_2;
+				font-size: 10px;
+				margin-right: 10px;
+			}
+
+			&-arrowImage {
+				margin-left: 5px;
+			}
+
+			&-date2 {
+				margin-left: 15px;
+
+				&-date {
+					color: $color_2;
+					font-size: 10px;
+					margin-right: 10px;
+				}
+				
+			}
+		}
+
+		&-listBox {
+			display: flex;
+			font-size: 12px;
+			margin-bottom: 20px;
+			justify-content: space-between;
+
+			&-itemList {
+				color: $color_3;
+				font-size: 12px;
+			}
+			
+			&-addItemtext {
+				font-weight: 600;
+				cursor: pointer;
+				user-select: none;
+			}
+		}
+
+		&-itembox1 {
+			flex: 1;
+			display: flex;
+			padding: 10px;
+			border-radius: 7px;
+			background-color: $background-color_2;
+			justify-content: space-between;
+
+			&-itemboxcheckbox {
+				display: flex;
+				gap: 8px;
+				align-items: center;
+
+				&-Item {
+					font-size: 10px;
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1350px) {
+	.itemList {
+		flex-wrap: wrap;
+		
+		&-itemListchild {
+			width: 100%;
+		}
+	}
+}
